@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="icon" href="./icons/ctf.png" type="image/x-icon">
+    <link rel="icon" href="./icons/ctf.png" type="image/x-icon" />
     <title>Tímový projekt - CTF</title>
   </head>
 
@@ -16,15 +16,14 @@
 
       <h2>Prehľad projektu:</h2>
       <p>
-        Cieľom tímového projektu je implementovať infraštruktúru, ktorá by
-        slúžila na organizovanie CTF (Capture The Flag) súťaží z oblasti
-        počítačovej bezpečnosti. CTF súťaž pozostáva z riešenia úloh, kde každá
-        beží v samostatnom docker kontajneri a cieľom používateľa je získať
-        hodnotu "flagu". Zadaním projektu je rozšíriť existujúcu bakalársku
-        prácu "Simulačná platforma na generovanie CTF úloh zameraných na
-        zraniteľnosti webových aplikácií". Samotné rozšírenie bude pozostávať z
-        implementácie autentifikácie, administrátorského panelu a ďalších typov
-        CTF úloh.
+        Cieľom tímového projektu je implementovať infraštruktúru, ktorá by slúžila na
+        organizovanie CTF (Capture The Flag) súťaží z oblasti počítačovej bezpečnosti. CTF
+        súťaž pozostáva z riešenia úloh, kde každá beží v samostatnom docker kontajneri a
+        cieľom používateľa je získať hodnotu "flagu". Zadaním projektu je rozšíriť
+        existujúcu bakalársku prácu "Simulačná platforma na generovanie CTF úloh
+        zameraných na zraniteľnosti webových aplikácií". Samotné rozšírenie bude
+        pozostávať z implementácie autentifikácie, administrátorského panelu a ďalších
+        typov CTF úloh.
       </p>
 
       <h2 class="section-title">Vedúci tímu:</h2>
@@ -62,26 +61,51 @@
       </div>
 
       <h2 class="section-title">Aktuálny stav práce:</h2>
+      Posledné stretnutie: 9.10.2023
       <div class="status">
-        Oboznámenie sa s náležitosťami predmetu Tímový Projekt 1
         <ul style="margin: 0 auto">
-          <li>Predstavenie plánu na semester</li>
+          <li>zápisnica, aktualizácia stránky</li>
+          <li>migrácia aktuálneho stavu repozitára projektu na platformu Bitbucket</li>
+          <li>skúšobné spustenie aplikácie pre účely lokálneho vývoja</li>
           <li>
-            Rozdelenie úloh tímového lídra, správcu webovej stránky, správcu
-            zápisníc
-          </li>
-          <li>
-            Zadelenie úloh do najbližšieho stretnutia:
+            funkcionalita registrácie a prihlasovania používateľov:
             <ul>
-              <li>
-                oboznámenie sa s bakalárskou prácou, na ktorej sa zakladá
-                zadanie projektu
-              </li>
-              <li>výber platformy pre správu vývoja projektu</li>
-              <li>sprevádzkovanie webovej stránky projektu</li>
+              <li>databázový model</li>
+              <li>backend implementácia</li>
+              <li>frontend implementácia</li>
             </ul>
           </li>
+          <li>
+            analýza možnej implementácie funkcionality kontroly registrovaného používateľa
+            voči AIS databáze
+          </li>
         </ul>
+      </div>
+
+      <h3 class="dropdown-header">Staršie<span class="arrow">&#9660;</span></h3>
+
+      <div class="dropdown-content" style="display: none">
+        K stretnutiu: 25.9.2023
+        <div class="status-past">
+          Oboznámenie sa s náležitosťami predmetu Tímový Projekt 1
+          <ul style="margin: 0 auto">
+            <li>Predstavenie plánu na semester</li>
+            <li>
+              Rozdelenie úloh tímového lídra, správcu webovej stránky, správcu zápisníc
+            </li>
+            <li>
+              Zadelenie úloh do najbližšieho stretnutia:
+              <ul>
+                <li>
+                  oboznámenie sa s bakalárskou prácou, na ktorej sa zakladá zadanie
+                  projektu
+                </li>
+                <li>výber platformy pre správu vývoja projektu</li>
+                <li>sprevádzkovanie webovej stránky projektu</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <h2 class="section-title">Dokumenty:</h2>
@@ -90,7 +114,25 @@
           <img src="./icons/pdf.svg" alt="PDF Icon" class="pdf-icon" />
           Zapisnica 1
         </a>
+        <a href="./dokumenty/TP_zapisnica_2.pdf" download>
+          <img src="./icons/pdf.svg" alt="PDF Icon" class="pdf-icon" />
+          Zapisnica 2
+        </a>
       </div>
     </div>
+
+    <script>
+      document.querySelector(".dropdown-header").addEventListener("click", function () {
+        const content = document.querySelector(".dropdown-content");
+        const arrow = document.querySelector(".arrow");
+        if (content.style.display === "none") {
+          content.style.display = "block";
+          arrow.innerHTML = "&#9650;";
+        } else {
+          content.style.display = "none";
+          arrow.innerHTML = "&#9660;";
+        }
+      });
+    </script>
   </body>
 </html>
