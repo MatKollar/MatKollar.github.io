@@ -120,3 +120,11 @@ h3 {
     margin-left: 10px;
     transition: transform 0.3s;
 }
+
+.zs {
+    background-color: #000275;
+}
+
+.zs:hover {
+    background-color: #0000a0;
+}

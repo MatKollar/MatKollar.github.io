@@ -16,15 +16,14 @@
 
       <h2>Prehľad projektu:</h2>
       <p>
-        Cieľom tímového projektu je implementovať infraštruktúru, ktorá by
-        slúžila na organizovanie CTF (Capture The Flag) súťaží z oblasti
-        počítačovej bezpečnosti. CTF súťaž pozostáva z riešenia úloh, kde každá
-        beží v samostatnom docker kontajneri a cieľom používateľa je získať
-        hodnotu "flagu". Zadaním projektu je rozšíriť existujúcu bakalársku
-        prácu "Simulačná platforma na generovanie CTF úloh zameraných na
-        zraniteľnosti webových aplikácií". Samotné rozšírenie bude pozostávať z
-        implementácie autentifikácie, administrátorského panelu a ďalších typov
-        CTF úloh.
+        Cieľom tímového projektu je implementovať infraštruktúru, ktorá by slúžila na
+        organizovanie CTF (Capture The Flag) súťaží z oblasti počítačovej bezpečnosti. CTF
+        súťaž pozostáva z riešenia úloh, kde každá beží v samostatnom docker kontajneri a
+        cieľom používateľa je získať hodnotu "flagu". Zadaním projektu je rozšíriť
+        existujúcu bakalársku prácu "Simulačná platforma na generovanie CTF úloh
+        zameraných na zraniteľnosti webových aplikácií". Samotné rozšírenie bude
+        pozostávať z implementácie autentifikácie, administrátorského panelu a ďalších
+        typov CTF úloh.
       </p>
 
       <h2 class="section-title">Vedúci tímu:</h2>
@@ -62,29 +61,74 @@
       </div>
 
       <h2 class="section-title">Aktuálny stav práce:</h2>
-      Posledné stretnutie: 04.12.2023
+      Posledné stretnutie: 19.02.2024
       <div class="status">
         <ul style="margin: 0 auto">
           <li>Zhodnotenie úloh z predošlého stretnutia</li>
           <li>Praktická ukážka aktuálneho stavu aplikácie</li>
           <li>Zadelenie úloh do budúcna:</li>
           <ul>
-            <li>Optimalizácia aplikácie, odstránenie chýb</li>
-            <li>Tvorba, moderovanie a správa tímov</li>
+            <li>Administrátorské možnosti pre spravovanie tímov (úprava tímov)</li>
+            <li>Nastaviteľná hodnota maximálneho počtu používateľov v tíme</li>
+            <li>
+              Update a implementácia skóre politiky: každý používateľ splnením zadania
+              získa pre tím 1 bod (implementácia počítania a zobrazovania stavu)
+            </li>
+            <li>
+              UX: pridať klikací link pre spustený simulátor (jednoduchšie otvorenie v
+              novom okne)
+            </li>
+            <li>
+              Zmena logiky zobrazovania aktuálne bežiacich simulátorov podľa hodnôt
+              vrátených backendom
+            </li>
           </ul>
-          <li>Diskusia nad budúcou činnosťou – nové koncepty simulátorov:</li>
+          <li>Diskusia nad budúcou činnosťou:</li>
           <ul>
-            <li>Kryptografické simulátory</li>
-            <li>Simulátor zameraný na reverzné inžinierstvo</li>
-            <li>Nové webové simulátory</li>
-            <li>Zadanie na analýzu logov (alebo analýza iných súborov, ktoré by priamo nevyžadovali spustenie simulátora)</li>
-            <li>Zadanie na analýzu webovej stránky</li>
+            <li>
+              Možnosti rozvoja ďalších simulátorov
+              <ul>
+                <li>Rozšíriť zadania s témou web</li>
+                <li>Nové kategórie</li>
+              </ul>
+            </li>
+            <li>
+              Pre nie-simulátorové zadania implementovať možnosť stiahnuť súbor /
+              prepojenie na Binary Ninja Cloud aplikáciu (priame nahranie súboru pre účel
+              analýzy)
+            </li>
           </ul>
         </ul>
       </div>
 
       <h3 class="dropdown-header">Staršie<span class="arrow">&#9660;</span></h3>
+      <div class="dropdown-content" style="display: none"></div>
+
+      <h3 class="dropdown-header zs">Zimny semester<span class="arrow">&#9660;</span></h3>
       <div class="dropdown-content" style="display: none">
+        K stretnutiu 04.12.2023
+        <div class="status-past">
+          <ul style="margin: 0 auto">
+            <li>Zhodnotenie úloh z predošlého stretnutia</li>
+            <li>Praktická ukážka aktuálneho stavu aplikácie</li>
+            <li>Zadelenie úloh do budúcna:</li>
+            <ul>
+              <li>Optimalizácia aplikácie, odstránenie chýb</li>
+              <li>Tvorba, moderovanie a správa tímov</li>
+            </ul>
+            <li>Diskusia nad budúcou činnosťou – nové koncepty simulátorov:</li>
+            <ul>
+              <li>Kryptografické simulátory</li>
+              <li>Simulátor zameraný na reverzné inžinierstvo</li>
+              <li>Nové webové simulátory</li>
+              <li>
+                Zadanie na analýzu logov (alebo analýza iných súborov, ktoré by priamo
+                nevyžadovali spustenie simulátora)
+              </li>
+              <li>Zadanie na analýzu webovej stránky</li>
+            </ul>
+          </ul>
+        </div>
         K stretnutiu 22.11.2023
         <div class="status-past">
           <ul style="margin: 0 auto">
@@ -97,8 +141,8 @@
               <li>Generovanie a vyhodnocovanie jedinečných flagov pre úlohy</li>
               <li>Používateľské rozhranie pre zadávanie nájdených flagov</li>
               <li>
-                Logovanie pokusu o zadanie existujúceho, no nesprávneho flagu (v
-                admin prehľade)
+                Logovanie pokusu o zadanie existujúceho, no nesprávneho flagu (v admin
+                prehľade)
               </li>
             </ul>
             <li>Diskusia nad budúcou činnosťou:</li>
@@ -119,12 +163,11 @@
               <li>Politika používateľov - oprávnenia typu user, admin</li>
               <li>Kategorizácia typov simulátorov na témy, celky</li>
               <li>
-                Úprava prihlasovania pomocou email adresy (predošlý stav
-                vyžaduje AIS ID)
+                Úprava prihlasovania pomocou email adresy (predošlý stav vyžaduje AIS ID)
               </li>
               <li>
-                Úprava dashboard v aplikácii do stavu pred implementovaním
-                registrácie (funkcionalita spustenia a zastavenia simulátora)
+                Úprava dashboard v aplikácii do stavu pred implementovaním registrácie
+                (funkcionalita spustenia a zastavenia simulátora)
               </li>
               <li>Nová funkcionalita pre dashboard aplikácie:</li>
               <ul>
@@ -157,10 +200,7 @@
         <div class="status-past">
           <ul style="margin: 0 auto">
             <li>zápisnica, aktualizácia stránky</li>
-            <li>
-              migrácia aktuálneho stavu repozitára projektu na platformu
-              Bitbucket
-            </li>
+            <li>migrácia aktuálneho stavu repozitára projektu na platformu Bitbucket</li>
             <li>skúšobné spustenie aplikácie pre účely lokálneho vývoja</li>
             <li>
               funkcionalita registrácie a prihlasovania používateľov:
@@ -182,15 +222,14 @@
           <ul style="margin: 0 auto">
             <li>Predstavenie plánu na semester</li>
             <li>
-              Rozdelenie úloh tímového lídra, správcu webovej stránky, správcu
-              zápisníc
+              Rozdelenie úloh tímového lídra, správcu webovej stránky, správcu zápisníc
             </li>
             <li>
               Zadelenie úloh do najbližšieho stretnutia:
               <ul>
                 <li>
-                  oboznámenie sa s bakalárskou prácou, na ktorej sa zakladá
-                  zadanie projektu
+                  oboznámenie sa s bakalárskou prácou, na ktorej sa zakladá zadanie
+                  projektu
                 </li>
                 <li>výber platformy pre správu vývoja projektu</li>
                 <li>sprevádzkovanie webovej stránky projektu</li>
@@ -226,16 +265,22 @@
           <img src="./icons/pdf.svg" alt="PDF Icon" class="pdf-icon" />
           Zapisnica 6
         </a>
+        <a href="./dokumenty/TP_zapisnica_7.pdf" download>
+          <img src="./icons/pdf.svg" alt="PDF Icon" class="pdf-icon" />
+          Zapisnica 7
+        </a>
       </div>
     </div>
 
     <script>
-      document
-        .querySelector(".dropdown-header")
-        .addEventListener("click", function () {
-          const content = document.querySelector(".dropdown-content");
-          const arrow = document.querySelector(".arrow");
-          if (content.style.display === "none") {
+      document.querySelectorAll(".dropdown-header").forEach(function (header) {
+        header.addEventListener("click", function () {
+          const content = header.nextElementSibling;
+          const arrow =
+            header.querySelector(".arrow") ||
+            header.nextElementSibling.querySelector(".arrow");
+
+          if (content.style.display === "none" || content.style.display === "") {
             content.style.display = "block";
             arrow.innerHTML = "&#9650;";
           } else {
@@ -243,6 +288,7 @@
             arrow.innerHTML = "&#9660;";
           }
         });
+      });
     </script>
   </body>
 </html>
